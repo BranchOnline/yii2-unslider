@@ -1,0 +1,28 @@
+{
+  "name": "branchonline/yii2-unslider",
+  "description": "Unslider widget for Yii2",
+  "keywords": [
+    "yii",
+    "yii2",
+    "widget",
+    "unslider"
+  ],
+  "homepage": "https://github.com/BranchOnline/yii2-unslider",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jap Mul",
+      "email": "jap@branchonline.nl"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/jquery.unslider": "1.0.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "branchonline\\unslider\\": "src/"
+    }
+  }
+}
