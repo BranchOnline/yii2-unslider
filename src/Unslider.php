@@ -83,7 +83,7 @@ class Unslider extends Widget {
     public function run() {
         $this->registerAssets();
 
-        $slider = Html::beginTag('div', ['class' => $this->getContainerCssClasses()]);
+        $slider = Html::beginTag('div', ['class' => implode(' ', $this->css_container_classes)]);
         $slider .= Html::beginTag('ul');
         foreach ($this->slides as $slide) {
             $slider .= '<li style="background-image: url(' . $slide['img'] . ')">';
@@ -112,38 +112,12 @@ class Unslider extends Widget {
     }
 
     /**
-     * Get classes for the container element
-     *
-     * @return string container css classes
-     */
-    protected function getContainerCssClasses() {
-        return $this->_flattenCssClasses($this->css_container_classes);
-    }
-
-    /**
      * Get classes for the button element
      *
      * @return string button css classes
      */
     protected function getButtonCssClasses() {
-        return $this->_flattenCssClasses($this->css_container_classes);
-    }
-
-    /**
-     * Flatten an array with implode. If the passed $css_classes is a string
-     * then we return the param as is.
-     * 
-     * @param array|string $css_classes the provided css classes
-     * @return string the flattend css classes
-     */
-    private function _flattenCssClasses($css_classes) {
-        $flatend_css_classes = '';
-        if(is_array($css_classes) && empty($css_classes)) {
-            $flatend_css_classes = implode(' ', $css_classes);
-        } else if (is_string($css_classes)) {
-            $flatend_css_classes = $css_classes;
-        }
-        return $flatend_css_classes;
+        return $this->css_button_classes;
     }
 
 }
