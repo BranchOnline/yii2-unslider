@@ -108,7 +108,7 @@ class Unslider extends Widget {
             UnsliderDefaultAsset::register($view);
         }
         $options = Json::encode($this->options);
-        $view->registerJs("jQuery('.$this->selector').unslider($options);");
+        $view->registerJs("jQuery('$this->selector').unslider($options);");
     }
 
     /**
