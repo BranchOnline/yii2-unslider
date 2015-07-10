@@ -44,7 +44,7 @@ class Unslider extends Widget {
     /**
      * @var string selector used for jquery
      */
-    public $selector = 'banner';
+    public $selector = '.banner';
 
     /**
      * @var array available css classes
