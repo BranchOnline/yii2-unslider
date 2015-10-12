@@ -86,7 +86,7 @@ class Unslider extends Widget {
         $slider = Html::beginTag('div', ['class' => implode(' ', $this->css_container_classes)]);
         $slider .= Html::beginTag('ul');
         foreach ($this->slides as $slide) {
-            $slider .= '<li style="background-image: url(' . $slide['img'] . ')">';
+            $slider .= '<li style="background-image: url(\'' . $slide['img'] . '\')">';
             $slider .= Html::beginTag('div', ['class' => 'inner']);
             $slider .= isset($slide['title']) ? Html::tag('h1', $slide['title'], ['class' => 'unslider-title']) : null;
             $slider .= isset($slide['body']) ? Html::tag('p', $slide['body'], ['class' => 'unslider-body']) : null;
