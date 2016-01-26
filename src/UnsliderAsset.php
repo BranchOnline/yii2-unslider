@@ -6,12 +6,12 @@ use yii\web\AssetBundle;
 
 class UnsliderAsset extends AssetBundle {
 
-	public $sourcePath = '@bower/jquery.unslider/src';
+	public $sourcePath = '@bower/jquery.unslider/dist';
 
 	public $baseUrl = '';
 
         public $js = [
-            'unslider.min.js',
+            'js/unslider.min.js',
         ];
 
         public $depends = [
