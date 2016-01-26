@@ -11,7 +11,7 @@ class UnsliderAsset extends AssetBundle {
 	public $baseUrl = '';
 
         public $js = [
-            'js/unslider.min.js',
+            'js/unslider-min.js',
         ];
 
         public $depends = [
