@@ -86,14 +86,16 @@ class Unslider extends Widget {
         $slider = Html::beginTag('div', ['class' => implode(' ', $this->css_container_classes)]);
         $slider .= Html::beginTag('ul');
         foreach ($this->slides as $slide) {
-            $slider .= '<li style="background-image: url(\'' . $slide['img'] . '\')">';
-            $slider .= Html::beginTag('div', ['class' => 'inner']);
-            $slider .= isset($slide['title']) ? Html::tag('h1', $slide['title'], ['class' => 'unslider-title']) : null;
-            $slider .= isset($slide['body']) ? Html::tag('p', $slide['body'], ['class' => 'unslider-body']) : null;
-            $slider .= isset($slide['button']) ? Html::a($slide['button']['title'], $slide['button']['href'],
-                ['class' => $slide['button']['class']]) : null;
-            $slider .= Html::endTag('div');
-            $slider .= '</li>';
+            $content = '';
+            $content .= isset($slide['title']) ? Html::tag('h1', $slide['title'], ['class' => 'unslider-title']) : null;
+            $content .= isset($slide['body']) ? Html::tag('p', $slide['body'], ['class' => 'unslider-body']) : null;
+            $content .= isset($slide['button']) ? Html::a($slide['button']['title'], $slide['button']['href'],
+                ['class' => $slide['button']['class']]
+            ) : null;
+            $content = Html::tag('table', Html::tag('tr', Html::tag('td', $content)));
+            $content = Html::tag('div', $content);
+            $img = Html::img($slide['img']);
+            $slider .= Html::tag('li', $content . $img);
         }
         $slider .= Html::endTag('ul');
         $slider .= Html::endTag('div');
