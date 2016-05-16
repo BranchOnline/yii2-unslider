@@ -6,7 +6,7 @@ use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use branchonline\unslider\UnsliderAsset;
-use branchonline\unslider\UnsliderDefaultAsset;
+use branchonline\unslider\ResizeAsset;
 
 /**
  * Widget for Unslider jQuery plugin
@@ -107,6 +107,7 @@ class Unslider extends Widget {
     protected function registerAssets() {
         $view = $this->getView();
         UnsliderAsset::register($view);
+        ResizeAsset::register($view);
         if($this->use_default_styling) {
             UnsliderStylingAsset::register($view);
         }
