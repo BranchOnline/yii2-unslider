@@ -92,7 +92,7 @@ class Unslider extends Widget {
             $content .= isset($slide['button']) ? Html::a($slide['button']['title'], $slide['button']['href'],
                 ['class' => $slide['button']['class']]
             ) : null;
-            $content = Html::tag('div', Html::tag('tr', Html::tag('td', $content)), 'immer__table__content');
+            $content = Html::tag('div', Html::tag('tr', Html::tag('td', $content)), ['class' => 'inner__table__content']);
             $content = Html::tag('div', $content, ['class' => 'inner__table']);
             $content = Html::tag('div', $content, ['class' => 'inner']);
             $img = Html::img('/img/slider-size.gif');

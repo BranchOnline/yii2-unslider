@@ -8,8 +8,7 @@ $(window).resize(function() {
 
 
 function setSize() {
-  // Get an array of all element heights
-
+   // Get an array of all element heights
    var elementHeights = $('.inner__table__content').map(function() {
      return $(this).height();
    }).get();
