@@ -107,7 +107,6 @@ class Unslider extends Widget {
     protected function registerAssets() {
         $view = $this->getView();
         UnsliderAsset::register($view);
-        ResizeAsset::register($view);
         if($this->use_default_styling) {
             UnsliderStylingAsset::register($view);
         }
