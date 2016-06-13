@@ -19,7 +19,7 @@ Usage
   use branchonline\unslider\Unslider;
   echo Unslider::widget([
       'options' => [
-          'dots' => false,
+          'nav' => false,
           'keys' => true,
           'fluid' => true
        ],
