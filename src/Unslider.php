@@ -15,7 +15,7 @@ use branchonline\unslider\ResizeAsset;
  * use branchonline\unslider\Unslider;
  * echo Unslider::widget([
  *     'options' => [
- *         'dots' => false,
+ *         'nav' => false,
  *         'keys' => true,
  *         'fluid' => true
  *      ],
@@ -65,7 +65,7 @@ class Unslider extends Widget {
      * @var array options passed to the unslider jquery plugin.
      */
     public $options = [
-        'dots' => true,
+        'nav' => true,
         'keys' => false,
         'fluid' => true
     ];
@@ -110,6 +110,11 @@ class Unslider extends Widget {
         if($this->use_default_styling) {
             UnsliderStylingAsset::register($view);
         }
+        
+        if (count($this->slides) <= 1) {
+            $this->options['nav'] = false;
+        }
+
         $options = Json::encode($this->options);
         $view->registerJs("jQuery('$this->selector').unslider($options);");
     }
