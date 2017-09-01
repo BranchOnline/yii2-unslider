@@ -23,12 +23,13 @@
   },
   "config": {
     "fxp-asset": {
-      "repositories": {
-        "bower-asset/jquery.unslider": {
+      "repositories": [
+        {
           "type": "bower-vcs",
-          "url": "git@github.com:/idiot/unslider.git"
+          "url": "git@github.com:idiot/unslider.git",
+          "name": "bower-asset/jquery.unslider"
         }
-      }
+      ]
     }
   },
   "autoload": {
