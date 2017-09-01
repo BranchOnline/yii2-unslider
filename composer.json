@@ -18,7 +18,8 @@
   ],
   "require": {
     "yiisoft/yii2": "*",
-    "bower-asset/jquery.unslider": "2.0.3"
+    "bower-asset/jquery.unslider": "dev-master#3cf59826f309fc4815409d47cc53b803cc44dfc2",
+    "bower-asset/jquery.event.swipe": "0.5.4"
   },
   "autoload": {
     "psr-4": {

@@ -6,17 +6,16 @@ use yii\web\AssetBundle;
 
 class UnsliderAsset extends AssetBundle {
 
-	public $sourcePath = '@bower/jquery.unslider/dist';
+    public $sourcePath = '@bower/jquery.unslider/dist';
 
-	public $baseUrl = '';
+    public $js = [
+        'js/unslider-min.js',
+    ];
 
-        public $js = [
-            'js/unslider-min.js',
-        ];
-
-        public $depends = [
-            'yii\web\JqueryAsset',
-        ];
+    public $depends = [
+        'branchonline\unslider\SwipeAsset',
+        'yii\web\JqueryAsset',
+    ];
 
 }
 
