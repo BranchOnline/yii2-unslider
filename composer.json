@@ -21,6 +21,16 @@
     "bower-asset/jquery.unslider": "dev-master#3cf59826f309fc4815409d47cc53b803cc44dfc2",
     "bower-asset/jquery.event.swipe": "0.5.4"
   },
+  "config": {
+    "fxp-asset": {
+      "repositories": {
+        "bower-asset/jquery.unslider": {
+          "type": "bower-vcs",
+          "url": "git@github.com:/idiot/unslider.git"
+        }
+      }
+    }
+  },
   "autoload": {
     "psr-4": {
       "branchonline\\unslider\\": "src/"
