@@ -9,7 +9,7 @@ class MoveAsset extends AssetBundle {
     public $sourcePath = '@vendor/branchonline/yii2-unslider/src/assets';
 
     public $js = [
-        'jquery.event.move.js',
+        'js/jquery.event.move.js',
     ];
 
     public $depends = [

@@ -9,7 +9,7 @@ class SwipeAsset extends AssetBundle {
     public $sourcePath = '@vendor/branchonline/yii2-unslider/src/assets';
 
     public $js = [
-        'jquery.event.swipe.js',
+        'js/jquery.event.swipe.js',
     ];
 
     public $depends = [
