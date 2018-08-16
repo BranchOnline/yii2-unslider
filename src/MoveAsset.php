@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class MoveAsset extends AssetBundle {
 
-    public $sourcePath = '@bower/jquery.event.move/js';
+    public $sourcePath = '@vendor/branchonline/yii2-unslider/src/assets';
 
     public $js = [
         'jquery.event.move.js',

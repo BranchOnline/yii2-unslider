@@ -5,18 +5,18 @@ use yii\web\AssetBundle;
 
 class UnsliderDefaultAsset extends AssetBundle {
 
-	public $sourcePath = '@vendor/branchonline/yii2-unslider/src/assets';
+    public $sourcePath = '@vendor/branchonline/yii2-unslider/src/assets';
 
-	public $baseUrl = '';
+    public $baseUrl = '';
 
-        public $css = [
-            'css/style.css',
-        ];
+    public $css = [
+        'css/style.css',
+    ];
 
-        public $depends = [
-            'yii\web\JqueryAsset',
-            'branchonline\unslider\UnsliderAsset',
-        ];
+    public $depends = [
+        'yii\web\JqueryAsset',
+        'branchonline\unslider\UnsliderAsset',
+    ];
 
 }
 

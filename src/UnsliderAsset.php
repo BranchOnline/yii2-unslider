@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class UnsliderAsset extends AssetBundle {
 
-    public $sourcePath = '@bower/jquery.unslider/dist';
+    public $sourcePath = '@vendor/branchonline/yii2-unslider/src/assets';
 
     public $js = [
         'js/unslider-min.js',
