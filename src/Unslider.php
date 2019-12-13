@@ -95,9 +95,9 @@ class Unslider extends Widget {
             $content = Html::tag('div', Html::tag('tr', Html::tag('td', $content)), ['class' => 'inner__table__content']);
             $content = Html::tag('div', $content, ['class' => 'inner__table']);
             $content = Html::tag('div', $content, ['class' => 'inner']);
-            $img = Html::img('/img/slider-size.gif');
+            $content .= Html::tag('div', '', ['class' => 'hero__image', 'style' => 'background-image: url(' . str_replace(')', '\)', str_replace('(', '\(', str_replace(' ', '\ ', $slide['img']))) . ');']);
             $classes = (empty($slide['classes']) ? [] : $slide['classes']);
-            $slider .= Html::tag('li', $content . $img, ['class' => implode(' ', $classes), 'style' => 'background-image: url(' . str_replace(')', '\)', str_replace('(', '\(', str_replace(' ', '\ ', $slide['img']))) . ');']);
+            $slider .= Html::tag('li', $content, ['class' => implode(' ', $classes), ]);
         }
         $slider .= Html::endTag('ul');
         $slider .= Html::endTag('div');
